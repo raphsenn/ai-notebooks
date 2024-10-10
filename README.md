@@ -11,3 +11,4 @@ Some ai notebooks about Rational agents, Searching, Constraint satisfaction, Boa
 * Acting under Uncertainty
 * Machine Learning
 * Deep Learning
+* Optimization Algorithms (Theorie)
