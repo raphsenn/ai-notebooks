@@ -11,11 +11,11 @@ class PolynomialRegression:
         self.linear_model = LinearRegression()
         self.feature_transformation = PolynomialFeatures(degree=degree)
 
-    def fit(self, X_train: np.array, y_train: np.array) -> None:
+    def fit(self, X_train: np.ndarray, y_train: np.ndarray) -> None:
         X_transformed = self.feature_transformation.fit_transform(X_train)
         self.linear_model.fit(X_transformed, y_train)
 
-    def predict(self, X: np.array) -> np.array:
+    def predict(self, X: np.ndarray) -> np.ndarray:
         X_transformed = self.feature_transformation.fit_transform(X)
         return self.linear_model.predict(X_transformed)
 

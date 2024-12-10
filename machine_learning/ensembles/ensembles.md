@@ -9,10 +9,6 @@
 
 The Bias-Variance Decomposition:
 
-# Variance Reduction
-
-The Bias-Variance Decomposition:
-
 $$
 \mathbb{E}_{x, y, \mathcal{D}} \left[ (\hat{f}(x; \mathcal{D}) - y)^2 \right] =
 \underbrace{\mathbb{E}_{x, \mathcal{D}} \left[ (\hat{f}(x; \mathcal{D}) - \bar{f}(x))^2 \right]}_{\text{Variance}}
