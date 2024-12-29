@@ -144,4 +144,24 @@ $$
 
 - In **(B)**, where errors are uncorrelated, the error is reduced **linearly** with \( K \).
 
-# Boosting
+# Boosting as Additive Models
+
+- **Boosting** sequentially aggregates high-bias models to create a low-bias ensemble.
+
+- The ensemble $F^{(K)}$ is a weighted sum of $f^{(k)}$, for all $k \in \{1, \ldots, K\}$:
+
+  $$
+  F^{(K)}(x) = \sum_{k=1}^K \alpha f^{(k)}(x)
+  $$
+
+- We add one model at a time sequentially:
+
+  $$
+  F^{(K+1)}(x) = \sum_{k=1}^{K+1} \alpha f^{(k)}(x) = F^{(K)}(x) + \alpha f^{(K+1)}(x)
+  $$
+
+- Train the parameters of the next $(K + 1)$-th model by keeping the past models fixed:
+
+  $$
+  \theta^{(K+1)} \coloneqq \arg \min_\theta \sum_{n=1}^N \mathcal{L}\left(y_n, F^{(K)}(x_n) + \alpha f(x_n; \theta)\right)
+  $$
