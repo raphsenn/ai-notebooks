@@ -71,9 +71,7 @@ $$
 $$
 
 
-# Bagging
-
-## Bootstrap Aggregation (Bagging)
+# Bootstrap Aggregation (Bagging)
 
 - Sample $ \mathcal{D}^{(1)}, \dots, \mathcal{D}^{(K)} $ with replacement from $ \mathcal{D}^{\text{Train}} \in (\mathcal{X} \times \mathcal{Y})^N $ .
 - The distribution of sampling one instance \( I \) is:
